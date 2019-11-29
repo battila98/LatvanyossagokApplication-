@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace LatvanyossagokApplication
 {
@@ -14,9 +16,19 @@ namespace LatvanyossagokApplication
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            }
+            catch (IOException e)
+            {
+
+                MessageBox.Show("Kapcsolódási hiba!\n" +
+                    "Az alkalmazás most bezár");
+            }
+            
         }
     }
 }
