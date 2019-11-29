@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
 
+
 namespace LatvanyossagokApplication
 {
     static class Program
@@ -27,8 +28,8 @@ namespace LatvanyossagokApplication
 
                 MessageBox.Show("Kapcsolódási hiba!\n" +
                     "Az alkalmazás most bezár");
-            }
-            
+            }         
         }
+       
     }
 }
